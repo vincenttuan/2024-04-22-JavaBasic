@@ -1,11 +1,14 @@
 package day2;
 
-package day2;
-
 public class Test6 {
 
 	public static void main(String[] args) {
-		
+		double depth = 15.0; // 地震深度(km);
+		double distance = 120; // 距離震央(km)
+
+		double value = estimateMagnitude(depth, distance);
+		System.out.printf("估計地震的芮氏規模: %.1f%n", value);
+
 	}
 
 	// 預估地震幅度
