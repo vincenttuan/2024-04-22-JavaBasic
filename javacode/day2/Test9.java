@@ -1,5 +1,6 @@
 package day2;
 
+import java.util.Scanner;
 /**
 題目：每日水分攝取計算器
 背景
@@ -20,8 +21,24 @@ package day2;
 高：基本需求 * 1.5
 */
 public class Test9 {
+
 	public static void main(String[] args) {
-		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("請輸入體重(kg):");
+		double weight = sc.nextDouble();
+
+		System.out.println("請輸入日常活動水平:");
+		System.out.println("1. 低");
+		System.out.println("2. 中");
+		System.out.println("3. 高");
+		System.out.print("==> ");
+
+		int level = sc.nextInt();
+		double waterIntake = calculateWaterIntake(weight, level);
+
+		System.out.printf("您每日水分攝取量建議是 %.1f 毫升%n", waterIntake);
+
 	}
 
 	// 計算水份攝取
