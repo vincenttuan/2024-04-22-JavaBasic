@@ -3,7 +3,7 @@ package day4;
 public class Case6 {
 
 	public static void main(String[] args) {
-		String id = "A223456789";
+		String id = "A123456789";
 		char gender = id.charAt(1); // 第二個字元;
 		char kind   = id.charAt(2); // 第三個字元;
 		System.out.printf("gender: %c kind: %c%n", gender, kind);
@@ -33,6 +33,50 @@ public class Case6 {
 		//      7 入籍國民，原為無戶籍國民
 		//      8 入籍國民，原為香港居民或澳門居民
 		//      9 入籍國民，原為大陸地區居民
+		switch(kind) {
+			case '0':
+			case '1':
+			case '2':
+			case '3':
+			case '4':
+			case '5':
+				System.out.println("在臺灣出生之本籍國民");
+				break;
+			case '6':
+				System.out.println("入籍國民，原為外國人");
+				break;
+			case '7':
+				System.out.println("入籍國民，原為無戶籍國民");
+				break;
+			case '8':
+				System.out.println("入籍國民，原為香港居民或澳門居民");
+				break;
+			case '9':
+				System.out.println("入籍國民，原為大陸地區居民");
+				break;
+
+		}
+
+		switch(kind) {
+			default:
+				System.out.println("在臺灣出生之本籍國民");
+				break;
+			case '6':
+				System.out.println("入籍國民，原為外國人");
+				break;
+			case '7':
+				System.out.println("入籍國民，原為無戶籍國民");
+				break;
+			case '8':
+				System.out.println("入籍國民，原為香港居民或澳門居民");
+				break;
+			case '9':
+				System.out.println("入籍國民，原為大陸地區居民");
+				break;
+
+		}
+
+
 	}
 
 }
