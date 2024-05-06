@@ -15,6 +15,11 @@ public class DoWhileDemo1 {
 			Scanner scanner = new Scanner(System.in);
 			System.out.print("1~9請猜一數字:");
 			int guess = scanner.nextInt();
+			// 驗證使用者所猜的數字是否在合法範圍
+			if(guess < 1 || guess > 9) {
+				System.out.println("數字範圍不正確");
+				continue;
+			}
 			// 比對
 			if(guess > ans) {
 				System.out.println("猜大了");
