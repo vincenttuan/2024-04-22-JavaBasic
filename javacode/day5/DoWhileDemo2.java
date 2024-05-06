@@ -16,6 +16,11 @@ public class DoWhileDemo2 {
 			//-- User
 			System.out.printf("User 請在 %d~%d 之間猜一數字: ", min, max);
 			int userGuess = scanner.nextInt();
+			// 驗證使用者所猜的數字是否在合法範圍
+			if(userGuess <= min || userGuess >= max) {
+				System.out.println("數字範圍不正確");
+				continue;
+			}
 			if(userGuess < ans) {
 				min = userGuess;
 			} else if(userGuess > ans) {
